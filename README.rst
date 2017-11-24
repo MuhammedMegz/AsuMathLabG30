@@ -44,6 +44,8 @@ Some **Important** notes about **Command Lines**
 
   A = [2.2 7.3 4.8 2.4; 2.3 6.5 8.9 1.2; 4.9 3.8 7.2 7.5; 9.8 3.4 7.5 8.9]
   
+  
+  
   This matrix is 4x4 matrix you write the first row then but ';' and between each element you but space ' '.
 
 
