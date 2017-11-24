@@ -70,7 +70,7 @@ For example:
     
 The two matrices A and B should be defined before this command with the same name and the upper case as it is **Case Sensitive** commands.
 
- Core Operations And it's Syntax:
+Core Operations And it's Syntax:
 ----
 
 ::
