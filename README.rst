@@ -23,3 +23,9 @@ Math Lab can do the following operations:
 •	Ad joint.
 •	Cofactor.
 
+Configuration:
+----
+There are two methods to configure with this project.The first method is to write command lines in the Terminal (console).
+For example on the first method : if you want to add two matrices A and B after entering the values of them and put the result in matrix C the command line will be :
+::
+C = A + B
