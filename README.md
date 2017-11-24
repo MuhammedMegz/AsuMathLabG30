@@ -1,1 +1,0 @@
-# AsuMathLabG30
