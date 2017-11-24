@@ -34,7 +34,7 @@ For example on the first method : if you want to add two matrices A and B (after
   
 Hint: all operations will be the same with the change of operator '+' and put the operator of operation the you want.
 
-The second method and the more recommended from the long calculations and operations is to enter a text file which have all your matrices and operations you want to do and make this file with extension '.m'.For Example if you text file name is "myOperations.txt" it should be "myOperations.s". 
+The second method and the more recommended from the long calculations and operations is to enter a text file which have all your matrices and operations you want to do and make this file with extension '.m'.For Example if you text file name is "myOperations.txt" it should be "myOperations.m". 
 
 Some **Important** notes about **Command Lines** :
 ----
@@ -48,7 +48,7 @@ Some **Important** notes about **Command Lines** :
   
 This matrix is 4x4 matrix you write the first row then but ';' and between each element you but space ' '.
 
-- Dont feel confused about hiting enter or continue the matrix elements int new line "our code handel all these issues".
+- Dont feel confused about hiting enter or continue the matrix elements in new line "our code handel all these issues".
 
 For example:
 
