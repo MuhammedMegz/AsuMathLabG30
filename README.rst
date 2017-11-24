@@ -59,8 +59,16 @@ For example:
   7.2 7.5 9.8 3.4 7.5 8.9; 8.9 7.3 4.8 2.4 2.3 6.5 8.9 1.2 4.9 3.8 7.2 7.5 9.8 3.4 7.5 8.9 8.9 7.3 4.8 2.4 2.3 6.5 8.9 1.2
   4.9 3.8 7.2 7.5 9.8 3.4 7.5 8.9; 8.9 7.3 4.8 2.4 2.3 6.5 8.9 1.2 4.9 3.8 7.2 7.5 9.8 3.4 7.5]
   
+- Our program support multiable operation in the same line.
+
+For example:
+
+::
   
-- The operations **Must** go on exsisting defined matrices.
+  A = B + C - D * F / G
+  
+
+- The operations **Must** go on exsisting defined matrices and if dont you will have an error with the name of the undefined matrix.
   
   For example: if you are going to make multiplication on two matrices A and B and put the result in matrix C 
   
@@ -68,7 +76,7 @@ For example:
   
     C = A * B
     
-The two matrices A and B should be defined before this command with the same name and the upper case as it is **Case Sensitive** commands.
+The two matrices A and B should be defined before this command with the same name.
 
 Core Operations And it's Command Lines:
 ----
