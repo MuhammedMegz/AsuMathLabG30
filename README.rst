@@ -26,7 +26,7 @@ Math Lab can do the following operations:
 Configuration:
 ----
 There are two methods to configure with this project.The first method is to write command lines in the Terminal (console).
-For example on the first method : if you want to add two matrices A and B after entering the values of them and put the result in matrix C the command line will be :
+For example on the first method : if you want to add two matrices A and B (after entering the values of them), and put the result in matrix C the command line will be :
 
 ::
 
@@ -34,6 +34,6 @@ For example on the first method : if you want to add two matrices A and B after 
   
 Hint: all operations will be the same with the change of operator '+' and put the operator of operation the you want.
 
-
+The second method and the more recommended from the long calculations and operations is to enter a text file which have all your matrices and operations you want to do and make this file with extension '.m'.For Example if you text file name is "myOperations.txt" it should be "myOperations.txt". 
   
   
