@@ -84,9 +84,4 @@ Core Operations And it's Command Lines:
 
 Fixed Bugs and Issues:
 -----
-
-- Zero value Determinant:
-------------
- this issues dont seems like big one but it is. This issue will give you a wrong results with division cause you are going to divide on the determinant which is equals to zero.
-  
   
