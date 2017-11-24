@@ -30,4 +30,10 @@ For example on the first method : if you want to add two matrices A and B after 
 
 ::
 
-  C = A + B
+  C = A + B  
+  
+Hint: all operations will be the same with the change of operator '+' and put the operator of operation the you want.
+
+
+  
+  
