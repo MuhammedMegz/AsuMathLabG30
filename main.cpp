@@ -56,50 +56,55 @@ public :
 };
 
 CMatrix  CMatrix::getInverse(){
- int i,j,k,n;
-   double a[100][200],t;
-     n=nR ;
- for(i=0;i<n;i++)
-      for(j=0;j<n;j++)
-         a[i][j]=values[i][j];
-   for(i=0;i<n;i++)
-   {
-      for(j=n;j<2*n;j++)
-      {
-          if(i==j-n)
-             a[i][j]=1;
-         else
-             a[i][j]=0;
-       }
-   }
-   for(i=0;i<n;i++)
-   {
-      t=a[i][i];
-      for(j=i;j<2*n;j++)
-          a[i][j]=a[i][j]/t;
-      for(j=0;j<n;j++)
-      {
-         if(i!=j)
-         {
-            t=a[j][i];
-            for(k=0;k<2*n;k++)
-                a[j][k]=a[j][k]-t*a[i][k];
-          }
-      }
-   }
-   double b [100][100];
-   for(i=0;i<n;i++)
-   {
-      for(j=n;j<2*n;j++)
-         b[i][j-n]= a[i][j];
+	int i,j,k,n;
+	double a[100][200],t;
+	n=nR ;
+	for(i=0;i<n;i++)
+		for(j=0;j<n;j++)
+			a[i][j]=values[i][j];
+	for(i=0;i<n;i++)
+	{
+		for(j=n;j<2*n;j++)
+		{
+			if(i==j-n)
+				a[i][j]=1;
+			else
+				a[i][j]=0;
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		t=a[i][i];
+		for(j=i;j<2*n;j++){
+			if (t == 0){
+				throw((string)"Singular matrix, can't find its inverse");
+				return NULL;
+			}
+			a[i][j]=a[i][j]/t;
+		}
+		for(j=0;j<n;j++)
+		{
+			if(i!=j)
+			{
+				t=a[j][i];
+				for(k=0;k<2*n;k++)
+					a[j][k]=a[j][k]-t*a[i][k];
+			}
+		}
+	}
+	double b [100][100];
+	for(i=0;i<n;i++)
+	{
+		for(j=n;j<2*n;j++)
+			b[i][j-n]= a[i][j];
 
-    }
-    nR=nC=n ;
-   for(i=0;i<n;i++)
-   {
-	   for(j=0;j<n;j++){values[i][j]=b[i][j];}
-   }
-  return *this ;
+	}
+	nR=nC=n ;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n;j++){values[i][j]=b[i][j];}
+	}
+	return *this ;
 }
 
 CMatrix CMatrix::getAdjoint(const CMatrix &m){
@@ -133,7 +138,7 @@ CMatrix CMatrix::getCofactor(int r, int c)
 			int sC = (iC<c)?iC:iC+1;
 			m.values[iR][iC] = values[sR][sC];
 		}
-	return m;
+		return m;
 }
 double CMatrix::getDeterminant()
 {
@@ -151,14 +156,24 @@ double CMatrix::getDeterminant()
 
 CMatrix CMatrix::operator/(const CMatrix& m){
 	CMatrix r = *this;
-	r /= m;
+	try{
+		r /= m;
+	}catch(string error){
+		throw(error);
+		return NULL;
+	}
 	return r;
 }
 
 void CMatrix::operator/=(const CMatrix& m){
 	CMatrix r = *this;
 	CMatrix temp = m;
-	r *= temp.getInverse();
+	try{
+		r *= temp.getInverse();
+	}catch(string error){
+		throw(error);
+		return;
+	}
 	*this = r;
 }
 
@@ -189,7 +204,7 @@ void CMatrix::mul(const CMatrix& m){
 			for(int k=0;k<nC;k++)
 				r.values[iR][iC] += values[iR][k]*m.values[k][iC];
 		}
-	copy(r);
+		copy(r);
 }
 
 void CMatrix::operator*=(const CMatrix& m){
@@ -298,12 +313,12 @@ CMatrix::CMatrix(int nR , int nC) {
 	this-> nC=nC;
 	if((nR*nC)==0){values=NULL; return;}
 	values = new double * [nR] ;
-	/*va_list va ;
-	va_start (va , nC);*/
+	//va_list va ;
+	//va_start (va , nC);
 	for(int i = 0 ; i<nR ; i++){
 		values[i]= new double [nC];
 		/*for(int j=0 ; j<nC ; j++){
-			values[i][j] = va_arg(va,double) ;
+		values[i][j] = va_arg(va,double) ;
 		}*/
 	}
 	//va_end(va) ;
@@ -425,8 +440,8 @@ int main(int argc, char** argv){
 	string command;
 	ifstream inputFile;
 	list<CMatrix> matrix_list;
-	if (argc == 2){
-		inputFile.open(argv[1]);
+	if (argc == 2 || 1){
+		inputFile.open("C:\\Users\\Mohamed Elattar\\Desktop\\bigexample.m");
 		if (inputFile.bad() || inputFile.fail()){
 			cout << "Failed to open input file" << endl;
 			return 1;
