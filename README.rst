@@ -36,9 +36,13 @@ Hint: all operations will be the same with the change of operator '+' and put th
 
 The second method and the more recommended from the long calculations and operations is to enter a text file which have all your matrices and operations you want to do and make this file with extension '.m'.For Example if you text file name is "myOperations.txt" it should be "myOperations.s". 
 
-Some **Important** notes about **Command Lines**:
--
--
+Some **Important** notes about **Command Lines
+
+- Define Matrix: 
+
+::
+  A = [2.2 7.3 4.8 2.4; 2.3 6.5 8.9 1.2; 4.9 3.8 7.2 7.5; 9.8 3.4 7.5 8.9]
+
 
   
   
