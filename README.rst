@@ -67,7 +67,7 @@ For example:
   
   A = B + C - D * F / G
   
--If you want to exit the program you write "exit" in the Terminal (console).
+- If you want to exit the program you write "exit" in the Terminal (console).
   
 
 - The operations **Must** go on exsisting defined matrices and if dont you will have an error with the name of the undefined matrix.
