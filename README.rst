@@ -72,6 +72,14 @@ The two matrices A and B should be defined before this command with the same nam
 
 Operations And it's Syntax:
 ----
+::
+  C = A + B  // Add 
+  C = A - B  //Subtract
+  C = A * B  //multiplication
+  C = A / B  //Division
+  C = A'     //Inverse
+  
+
 
 
 
