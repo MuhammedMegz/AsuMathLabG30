@@ -36,6 +36,9 @@ Hint: all operations will be the same with the change of operator '+' and put th
 
 The second method and the more recommended from the long calculations and operations is to enter a text file which have all your matrices and operations you want to do and make this file with extension '.m'.For Example if you text file name is "myOperations.txt" it should be "myOperations.s". 
 
-Some *Important* notes about *Command Lines*
+Some **Important** notes about **Command Lines**:
+-
+-
+
   
   
