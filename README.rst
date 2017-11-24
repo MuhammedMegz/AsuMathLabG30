@@ -30,4 +30,4 @@ For example on the first method : if you want to add two matrices A and B after 
 
 ::
 
-C = A + B
+  C = A + B
