@@ -82,7 +82,8 @@ Core Operations And it's Command Lines:
   C = A'     //Inverse
   
 
-
+Bugs And Fixed Issues:
+-----
 
 
   
