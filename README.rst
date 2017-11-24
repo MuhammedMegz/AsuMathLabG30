@@ -41,6 +41,7 @@ Some **Important** notes about **Command Lines
 - Define Matrix: 
 
 ::
+
   A = [2.2 7.3 4.8 2.4; 2.3 6.5 8.9 1.2; 4.9 3.8 7.2 7.5; 9.8 3.4 7.5 8.9]
 
 
