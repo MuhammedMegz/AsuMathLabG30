@@ -16,7 +16,7 @@ class CMatrix {
 public :
 	// constructors and destructors
 	CMatrix () ;
-	CMatrix (int nR , int nC, ...) ;
+	CMatrix (int nR , int nC) ;
 	void reset ();
 	~CMatrix () ;
 	CMatrix(string s);
@@ -293,20 +293,20 @@ CMatrix::CMatrix() {
 	values = NULL ;
 }
 
-CMatrix::CMatrix(int nR , int nC, ...) {
+CMatrix::CMatrix(int nR , int nC) {
 	this-> nR=nR ;
 	this-> nC=nC;
 	if((nR*nC)==0){values=NULL; return;}
 	values = new double * [nR] ;
-	va_list va ;
-	va_start (va , nC);
+	/*va_list va ;
+	va_start (va , nC);*/
 	for(int i = 0 ; i<nR ; i++){
 		values[i]= new double [nC];
-		for(int j=0 ; j<nC ; j++){
+		/*for(int j=0 ; j<nC ; j++){
 			values[i][j] = va_arg(va,double) ;
-		}
+		}*/
 	}
-	va_end(va) ;
+	//va_end(va) ;
 }
 
 void CMatrix::reset(){
