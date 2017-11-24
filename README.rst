@@ -70,9 +70,11 @@ For example:
     
 The two matrices A and B should be defined before this command with the same name and the upper case as it is **Case Sensitive** commands.
 
-Operations And it's Syntax:
+ Core Operations And it's Syntax:
 ----
+
 ::
+
   C = A + B  // Add 
   C = A - B  //Subtract
   C = A * B  //multiplication
