@@ -59,7 +59,7 @@ For example:
   7.2 7.5 9.8 3.4 7.5 8.9; 8.9 7.3 4.8 2.4 2.3 6.5 8.9 1.2 4.9 3.8 7.2 7.5 9.8 3.4 7.5 8.9 8.9 7.3 4.8 2.4 2.3 6.5 8.9 1.2
   4.9 3.8 7.2 7.5 9.8 3.4 7.5 8.9; 8.9 7.3 4.8 2.4 2.3 6.5 8.9 1.2 4.9 3.8 7.2 7.5 9.8 3.4 7.5]
   
-- Our program support multiable operation in the same line.
+- Our program support multiable operation in the same line, however the operations will be executed from right to left.
 
 For example:
 
@@ -99,4 +99,7 @@ Fixed Bugs and Issues:
 
   this issues dont seems like big one but it is. This issue will give you a wrong results with division cause you are going to divide on the determinant which is equals to zero.
   
+- Segmentation Fault Error:
+
+  The functions "void addColumn(CMatrix& m)" and "void addRow(CMatrix& m)" is calling the matrix constructor "CMatrix (int nR , int nC, ...)" without passing any arguments to the va_list while the constructor is accessing va_list directly without checking if it exist or not, and that throws a segmentation fault error
   
