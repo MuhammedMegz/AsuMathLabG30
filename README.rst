@@ -101,5 +101,5 @@ Fixed Bugs and Issues:
   
 - Segmentation Fault Error:
 
-  The functions "void addColumn(CMatrix& m)" and "void addRow(CMatrix& m)" is calling the matrix constructor "CMatrix (int nR , int nC, ...)" without passing any arguments to the va_list while the constructor is accessing va_list directly without checking if it exist or not, and that throws a segmentation fault error
+  The functions **"void addColumn(CMatrix& m)"** and **"void addRow(CMatrix& m)"** is calling the matrix constructor **"CMatrix (int nR , int nC, ...)"** without passing any arguments to the **va_list** while the constructor is accessing **va_list** directly without checking if it exist or not, and that throws a **segmentation fault** error
   
