@@ -9,6 +9,7 @@
 #include <string>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 using namespace std;
 
 
@@ -57,6 +58,15 @@ public :
 	CMatrix operator*(const CMatrix& m);
 	CMatrix operator/(const CMatrix& m);
 	void operator/=(const CMatrix& m);
+    
+    // Trigonometric functions (sin ,cos ,tan ,sin^-1 ,cos^-1 ,tan^-1)
+    static CMatrix sin(CMatrix &M);  //sin
+    static CMatrix cos(CMatrix &M);  //cos
+    static CMatrix tan(CMatrix &M);  //tan
+    static CMatrix sinInv(CMatrix &M);  //asin2
+    static CMatrix cosInv(CMatrix &M);  //acos2
+    static CMatrix tanInv(CMatrix &M);  //atan2
+    
+    
 };
-
 #endif
