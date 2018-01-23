@@ -59,7 +59,7 @@ public :
 	CMatrix operator/(const CMatrix& m);
 	void operator/=(const CMatrix& m);
     
-    // Trigonometric functions (sin ,cos ,tan ,sin^-1 ,cos^-1 ,tan^-1)
+    // Trigonometric functions (sin ,cos ,tan ,sinh ,cosh ,tanh ,sin^-1 ,cos^-1 ,tan^-1 ,sinh^-1 ,cosh^-1 ,tanh^-1);
     static CMatrix sin(CMatrix &M);  //sin
     static CMatrix cos(CMatrix &M);  //cos
     static CMatrix tan(CMatrix &M);  //tan
