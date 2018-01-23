@@ -454,4 +454,5 @@ CMatrix CMatrix::tanInv(CMatrix &M){
             Result.values[i][j] = atan(M.values[i][j]);
     }
     return Result;
+	
 }
