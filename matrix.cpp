@@ -1,5 +1,5 @@
 #include "matrix.h"
-
+#include <math.h>
 CMatrix  CMatrix::getInverse(){
 	int i,j,k,n;
 	double a[100][200],t;
@@ -368,4 +368,90 @@ void CMatrix::PrintMatrix()
 			cout << "; ";
 	}
 	cout << "]" << endl;
+}
+
+ CMatrix CMatrix::sin(CMatrix &M){
+     CMatrix Result;
+     Result.nC = M.nC;
+     Result.nR = M.nR;
+     Result.values = new double*[Result.nR];
+     for (int i=0; i<Result.nR; i++)
+         Result.values[i] = new double[Result.nC];
+     for (int i=0; i<Result.nR; i++) {
+         for (int j=0; j<Result.nC; j++)
+             Result.values[i][j] = sinf((float)M.values[i][j]);
+     }
+     return Result;
+}
+
+
+CMatrix CMatrix::cos(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = cosf((float)M.values[i][j]);
+    }
+    return Result;
+}
+
+CMatrix CMatrix::tan(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = tanf((float)M.values[i][j]);
+    }
+    return Result;
+}
+
+CMatrix CMatrix::sinInv(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = asin(M.values[i][j]);
+    }
+    return Result;
+}
+
+
+CMatrix CMatrix::cosInv(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = acos(M.values[i][j]);
+    }
+    return Result;
+}
+
+CMatrix CMatrix::tanInv(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = atan(M.values[i][j]);
+    }
+    return Result;
 }
