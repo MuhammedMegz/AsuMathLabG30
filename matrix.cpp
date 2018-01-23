@@ -454,5 +454,88 @@ CMatrix CMatrix::tanInv(CMatrix &M){
             Result.values[i][j] = atan(M.values[i][j]);
     }
     return Result;
-	
+}
+
+CMatrix CMatrix::sinh(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = sinhf((float)M.values[i][j]);
+    }
+    return Result;
+}
+
+CMatrix CMatrix::cosh(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = coshf((float)M.values[i][j]);
+    }
+    return Result;
+}
+
+CMatrix CMatrix::tanh(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = tanhf((float)M.values[i][j]);
+    }
+    return Result;
+}
+
+CMatrix CMatrix::tanhInv(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = atanhf((float)M.values[i][j]);
+    }
+    return Result;
+}
+
+CMatrix CMatrix::sinhInv(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = asinhf((float)M.values[i][j]);
+    }
+    return Result;
+}
+
+CMatrix CMatrix::coshInv(CMatrix &M){
+    CMatrix Result;
+    Result.nC = M.nC;
+    Result.nR = M.nR;
+    Result.values = new double*[Result.nR];
+    for (int i=0; i<Result.nR; i++)
+        Result.values[i] = new double[Result.nC];
+    for (int i=0; i<Result.nR; i++) {
+        for (int j=0; j<Result.nC; j++)
+            Result.values[i][j] = acoshf((float)M.values[i][j]);
+    }
+    return Result;
 }
