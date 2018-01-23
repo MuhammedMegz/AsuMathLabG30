@@ -66,7 +66,12 @@ public :
     static CMatrix sinInv(CMatrix &M);  //asin2
     static CMatrix cosInv(CMatrix &M);  //acos2
     static CMatrix tanInv(CMatrix &M);  //atan2
-    
+    static CMatrix cosh(CMatrix &M);    //cosh
+    static CMatrix sinh(CMatrix &M);    //sinh
+    static CMatrix tanh(CMatrix &M);    //tanh
+    static CMatrix coshInv(CMatrix &M);   //acosh
+    static CMatrix sinhInv(CMatrix &M);   //asinh
+    static CMatrix tanhInv(CMatrix &M);   //atanh
     
 };
 #endif
