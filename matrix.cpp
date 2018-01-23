@@ -370,6 +370,7 @@ void CMatrix::PrintMatrix()
 	cout << "]" << endl;
 }
 
+// Trigonometric functions (sin ,cos ,tan ,sinh ,cosh ,tanh ,sin^-1 ,cos^-1 ,tan^-1 ,sinh^-1 ,cosh^-1 ,tanh^-1);
  CMatrix CMatrix::sin(CMatrix &M){
      CMatrix Result;
      Result.nC = M.nC;
